@@ -66,7 +66,17 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+.logo-image-appsys{
+    width:100%;
+    height:50px;
+}
 
+@media screen and (min-width:768px){
+    .logo-image-appsys{
+        width:100%;
+        height:60px;
+    }
+}
 /*nav items*/
 .nav-items {
     display: flex;
@@ -193,13 +203,13 @@ body {
 }
 
 
-/*  Home page Container */
+            /* ------------------- Home page Container ---------------------------*/
 .home-page-container{
     width:100%;
     min-height:100vh;
     display:flex;
     padding:20px;
-    background-image: url("https://www.mythriconsulting.com/images/company-mob.jpg");
+    background-image: url("img/company-mob.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center; 
@@ -207,7 +217,7 @@ body {
 
 @media screen and (min-width:768px){
     .home-page-container{
-        background-image: url("https://www.mythriconsulting.com/images/company.jpg");
+        background-image: url("img/company large.jpg");
     }
 }
 .home-page-content-container{
@@ -221,7 +231,7 @@ body {
         flex-direction: column;
     }
 }
-    /* home page heading container*/ 
+
 .home-heading-container{
     width:100%;
     display:flex;
@@ -235,8 +245,12 @@ body {
     font-weight:700;
     text-align:center;
 }
+@media screen and (min-width:768px){
+    .home-heading{
+        font-size:42px;
+    }
+}
 
-/* Home page Content Container*/
 .home-content-container{
     display:flex;
     flex-direction:column;
@@ -258,15 +272,20 @@ body {
         text-align:center;
     }
 }
+.content-para{
+    font-size:18px;
+}
 
-                                            /* who are we container*/
+
+
+                /* ---------------------  who are we container  --------------------*/
 .who-page-container{
     display:flex;
     flex-direction: column;
     justify-content: center;
     width:100%;
     min-height:100vh;
-    background-image: url("https://www.mythriconsulting.com/images/client-bg.jpg");
+    background-image: url("img/whoweare.jpg");
 }
 
 .whoAreWe-container{
@@ -329,8 +348,20 @@ body {
 .whoarewe-content-container-para{
     margin-top:30px;
 }
+.whoarewe-heading{
+    font-size:35px;
+    font-weight: 600;
+}
+@media screen and (min-width:768px){
+    .whoarewe-heading{
+        font-size:42px;
+    }
+}
+.whoarewe-para{
+    font-size:18px;
+}
 
-/* Our mission and values container*/
+        /* -------------------Our mission and values container -----------------*/
 
 .mission-values-container{
     min-height:100vh;
@@ -339,7 +370,10 @@ body {
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    background-image: url("https://www.mythriconsulting.com/images/client-bg.jpg");
+    background-image: url("img/client-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding:40px;
 }
 
@@ -375,10 +409,27 @@ body {
     align-items: center;
     margin-bottom:20px;
 }
-
+.mission-values-content-heading{
+    font-size: 35px;
+    font-weight:600;
+    text-align:center;
+}
+@media screen and (min-width:768px){
+    .mission-values-content-heading{
+        font-size: 40px;
+    }
+}
+.mission-values-content-para{
+    width:100%;
+}
+.mission-values-para{
+    font-size:18px;
+    font-weight: normal;
+    text-align: justify;
+}
 
 .mission-values-image-container{
-    width:30%;
+    width:40%;
     display:flex;
     flex-direction:column;
     justify-content: center;
@@ -391,8 +442,8 @@ body {
 }
 
 .mission-value-image{
-    width:50px;
-    height:50px;
+    width:250px;
+    height:250px;
 }
 @media screen and (min-width:768px){
     .mission-value-image{
@@ -419,21 +470,26 @@ body {
     font-size:30px;
     font-weight:600;
 }
+
             /* ---------- consulting page ----------*/
+
 .consulting-service-section{
-    height:100vh;
+    min-height:100vh;
     width:100%;
     padding:20px;
     display:flex;
     flex-direction:row;
     justify-content: flex-start;
     align-items:center;
-    background-image: url("https://www.manifieldsolicitors.com/wp-content/uploads/2018/03/RBC-Slide-1-Business-consulting1.png");
+    background-image: url("img/consulting-mob.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media screen and (min-width:768px){
     .consulting-service-section{
-        background-image: url("https://www.manifieldsolicitors.com/wp-content/uploads/2018/03/RBC-Slide-1-Business-consulting1.png");
+        background-image: url("img/consulting.jpg");
     }
 }
 
@@ -444,10 +500,12 @@ body {
     align-items: center;
     padding: 10px;
     width:100%;
+    color:white;
 }
 @media screen and (min-width:768px){
     .consultion-content-page{
         width:50%;
+        color:black;
     }
 }
 .consulting-heading-container{
@@ -461,7 +519,12 @@ body {
 .consulting-heading{
     font-size:35px;
     text-align:center;
-    font-weight:600;
+    font-weight:500;
+}
+@media screen and (min-width:768px){
+    .consulting-heading{
+        font-size: 42px;
+    }
 }
 .consulting-content{
     width:100%;
@@ -469,26 +532,30 @@ body {
 }
 .consulting-para{
     font-size:18px;
-    color:black;
     text-align: justify;
-    font-weight: 500;
+    font-style: normal;
 }
 
-/*----------------- Staffing Section Of the web page ---------------*/
+        /*----------------- Staffing Section Of the web page ---------------*/
 .staffing-section{
-    height:100vh;
+    min-height:100vh;
     width:100%;
     display:flex;
     flex-direction:row;
     justify-content:flex-end;
     align-items: center;
-    background-image: url("https://www.mythriconsulting.com/images/staffing.jpg");
+    background-image: url("img/staffing-mob.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding:20px;
 }
 
+@media screen and (min-width:768px){
+    .staffing-section{
+        background-image: url("img/staffing.jpg");
+    }
+}
 
 .staffing-content-page{
     display: flex;
@@ -497,10 +564,12 @@ body {
     align-items: center;
     padding:10px;
     width:100%;
+    color:white
 }
 @media screen and (min-width:768px){
     .staffing-content-page{
         width:50%;
+        color:black;
     }
 }
 .staffing-heading-container{
@@ -515,8 +584,12 @@ body {
 .staffing-heading{
     font-size:35px;
     font-weight:600;
-    color:black;
     text-align: center;
+}
+@media screen and (min-width:768px){
+    .staffing-heading{
+        font-size:42px;
+    }
 }
 
 .staffing-content{
@@ -526,16 +599,10 @@ body {
     align-items: center;
 }
 .staffing-para{
-    color:black;
     font-size:18px;
-    font-weight: 500;
+    font-weight: normal;
     text-align: justify;
     text-justify:inter-word;
-}
-@media screen and (min-width:768px){
-    .staffing-para{
-        color:black;
-    }
 }
 
                     /*----------------- Training Section of the web page--------------------- */
@@ -547,7 +614,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     padding:20px;
-    background-image: url("https://www.mythriconsulting.com/images/training.jpg");
+    background-image: url("img/training.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -610,15 +677,16 @@ body {
     flex-direction:column;
     justify-content: center;
     padding:20px;
-    background-image: url("https://www.mythriconsulting.com/images/app-dev-mob.jpg");
+    background-image: url("img/app-dev-mob.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     padding:20px;
 }
 
 @media screen and (min-width:768px){
     .application-section{
-        background-image: url("https://www.mythriconsulting.com/images/app-dev.jpg");
+        background-image: url("img/app-dev.jpg");
     }
 }
 .application-section-content-page{
@@ -674,6 +742,11 @@ body {
     font-weight:400;
 }
 
+
+
+/*================================================================================================================*/
+
+
                 /* ----------------------  clients section ------------------------------*/
 .clients-section{
     min-height: 100vh;
@@ -684,7 +757,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: lightblue;
-    background-image: url("https://www.mythriconsulting.com/images/whoweare.jpg");
+    background-image: url("img/client-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -738,15 +811,25 @@ body {
     align-items:center;
     flex-wrap:wrap;
     width:100%;
-    padding:20px 30px 20px 30px;
+    padding:10px;
+}
+@media screen and (min-width:768px){
+    .clients-images-container{
+        padding:20px 30px 20px 30px;
+    }
 }
 .clients-image-container{
-    padding:10px;
-    margin:20px;
+    margin:5px;
     border-radius:8px;
     border:1px solid;
     background-color: white;
     border-width:0px;
+}
+@media screen and (min-width:768px){
+    .clients-image-container{
+        padding:10px;
+         margin:20px;
+    }
 }
 
 .company-image{
@@ -812,19 +895,29 @@ body {
     font-weight:bold;
 }
 
-/* contact us section */
+            /*---------------------------------- contact us section------------------------------*/
 .contact-section{
     display:flex;
     flex-direction:column;
     align-items:center;
+    justify-content: center;
     min-height: 100vh;
     width:100%;
     padding:40px;
     background-color:azure;
+    background-image: url("img/contactbg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .contact-container{
     width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 .contact-heading-container{
     width: 100%;
@@ -833,6 +926,16 @@ body {
     justify-content: center;
     align-items: center;
     padding:20px;
+    color:white;
+}
+.contact-heading{
+    font-size:35px;
+    font-weight: 600;
+}
+@media screen and (min-width:768px){
+    .contact-heading{
+        font-size:42px;
+    }
 }
 .contact-map-container{
     width:100%;
@@ -853,6 +956,10 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top:30px;
+    width:90%;
+    background-color: white;
+    padding:20px;
+    border-radius: 20px;
 }
 
 @media screen and (min-width:768px){
@@ -888,119 +995,74 @@ body {
 
 
 
+/* ================================================================================================*/
+        /* ------------- Footer Section*/
 
-/* Footer Section*/
-.footer-section {
-    width: 100%;
+.footer-section{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*flex-wrap: wrap; */
-    padding: 40px 10px 80px 10px;
-    text-align: center;
+    padding:40px 20px 40px 20px;
 }
 
 @media screen and (min-width:768px){
-    .footer-section {
+    .footer-section{
         flex-direction: row;
-        justify-content: space-around;
     }
 }
 
-.footer-section-block {
-    display: flex;
+.footer-section-block{
+    width:100%;
+    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding:5px;
+}
+@media screen and (min-width:768px){
+    .footer-section-block{
+        width:25%;
+    }
+}
+@media screen and (max-width:768px){
+    .footer-section-block{
+        margin-bottom:10px;
+    }
+}
+.discription-section{
+    width:100%;
+}
+.description-para{
+    font-size:16px;
+    font-weight:normal;
+    text-align: justify;
+    padding:20px;
+}
+.social-icons{
+    width:50%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon{
+    font-size: 20px;
+    color: blue;
+}
+
+.footer-section-heading{
+    font-size:25px;
+    font-weight:600;
+    text-align: center;
+    color: skyblue;
+}
+.footer-list-items{
+    list-style: none;
 }
 @media screen and (max-width:767px){
-    .footer-section-block {
-        width:100%;
-        display: flex;
-        flex-direction:column;
-        justify-content: center;
-        align-items:center;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .footer-section-block {
-        margin-right: 20px;
-    }
-}
-
-@media screen and (min-width:768px) {
-    .footer-section-block {
-        padding-left: 0px;
-    }
-}
-
-.tasty-food-footer-heading {
-    color: #069C54;
-    text-decoration: none;
-    text-align: center;
-}
-
-.tasty-food-footer-heading:hover {
-    color: #069C54;
-    text-decoration: none;
-}
-
-.tasty-food-sub-heading {
-    color: #707070;
-    font-size: 18px;
-    font-weight: 600;
-    text-align: center;
-}
-
-.social-icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.socila-icons {
-    padding: 20px;
-}
-
-.icon {
-    font-size: 25px;
-    color: #069C54;
-}
-
-.footer-section-block {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-}
-
-.services-heading {
-    color: #707070;
-    font-size: 40px;
-}
-
-.footer-list-items {
-    list-style: none;
-    padding-left: 0px;
-}
-
-@media screen and (max-width:768px) {
-    .footer-list-items {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .footer-list-item {
+    .footer-list-item{
         text-align: center;
-    }
-}
-
-@media screen and (min-width:768px) {
-    .footer-list-item {
-        text-align: left;
-        padding-left: 0px;
-        margin-left: 0px;
     }
 }
