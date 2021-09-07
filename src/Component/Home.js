@@ -1,5 +1,7 @@
 import React from 'react';
-import Header from './SubComponents/Header';
+import Careers from './SubComponents/Careers/Careers';
+import Clients from './SubComponents/Clients';
+import Header from './SubComponents/Header/Header';
 
 class Home extends React.Component {
     render() {
@@ -189,156 +191,9 @@ class Home extends React.Component {
                             </div>
                         </section>
                         {/* clients section */}
-                        <section className="clients-section" id="clients">
-                            <div className="clients-content-container">
-                                <div className="clients-content-heading-container">
-                                    <h1 className="clients-heading">Clients</h1>
-                                </div>
-                                <div className="clients-content-para-container">
-                                    <p className="clients-content-para">
-                                        The e-World has created innumerable opportunities for organizations to exploit their core
-                                        business competencies by transforming their technology infrastructure from business to e-Business.
-                                        It is imperative that organizations define the right strategy, adopt a viable business model, and
-                                        choose wisely among the varied technology options.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="clients-images-container">
-                                <div className="clients-image-container">
-                                    <img src="assets\img\apple logo.jpg" className="company-image" />
-                                </div>
-                                <div className="clients-image-container">
-                                    <img src="assets\img\at&t logo.png" className="company-image" />
-                                </div>
-                                <div className="clients-image-container">
-                                    <img src="assets\img\cdk global logo.png" className="company-image" />
-                                </div>
-                                <div className="clients-image-container">
-                                    <img src="assets\img\cisco logo.png" className="company-image" />
-                                </div>
-                                <div className="clients-image-container">
-                                    <img src="assets\img\immegration logo.png" className="company-image" />
-                                </div>
-                                <div className="clients-image-container">
-                                    <img src="assets\img\verizon logo.png" className="company-image" />
-                                </div>
-                                <div className="clients-image-container">
-                                    <img src="assets\img\sangfilims logo.jpg" className="company-image" />
-                                </div>
-                                <div className="clients-image-container">
-                                    <img src="assets\img\pearson logo.png" className="company-image" />
-                                </div>
-                            </div>
-                        </section>
+                        <Clients />
                         {/* careers section page */}
-                        <section className="careers-section" id="careers">
-                            <div className="expand-container">
-                                <div className="careers-heading-container">
-                                    <h1 className="careers-heading"> Careers </h1>
-                                </div>
-                                <div id="accordion">
-                                    {/* Card -- card heading -- card content  */}
-                                    {/* Card 1 */}
-                                    <div className="card">
-                                        <div className="card-header" id="headingOne">
-                                            <h5 className="mb-0">
-                                                <button className="btn btn-link role-main-heading" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    Software Developer
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseOne" className="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                                            <div className="card-body">
-                                                <div className="card-body-container">
-                                                    <p className="heading-para-text"><span className="role-heading">Position : &nbsp; &nbsp;</span>
-                                                        Fulltime job, 40 hours per week
-                                                    </p>
-                                                    <p className="heading-para-text"><span className="role-heading">Number Of Openings : &nbsp; &nbsp;</span>
-                                                        Multiple
-                                                    </p>
-                                                    <p className="heading-para-text"><span className="role-heading">Location : &nbsp; &nbsp;</span>
-                                                        AppSys Technologies, LLC  &nbsp; &nbsp;
-                                                        P.O. Box 3645
-                                                        Olathe, KS 66063
-                                                    </p>
-                                                    <p className="heading-para-text"><span className="role-heading">Job Duties : &nbsp; &nbsp;</span>
-                                                        Develop, Create, Analyze and Modify web-based and cloud-based software systems using various software and cloud based technologies. Participate and Involve in entire Software Development Lifecycle (SDLC) to build enterprise level software applications. Design software or customize software for client use with the aim of optimizing operational efficiency. Develop by utilizing various UX development technologies for responsive user interfaces for software, utilize various backend technologies such as MS-SQL or ORACLE, apply appropriate algorithms to design efficient systems, use efficient programming languages such as Java or C# , utilize various mobile programming and systems based tools, various source control tools and various software testing frameworks to help in development of software systems. Work under supervision. Travel And/ Or Relocation to unanticipated client sites is required.
-                                                    </p>
-                                                    <p className="heading-para-text"><span className="role-heading">Education Required : &nbsp; &nbsp;</span>
-                                                        Master’s Degree in Computers Science, Computer Information Systems, Information Technology, Computer Engineering, Electrical Engineering, Electronics Engineering, Software Engineering or Closely Related.
-                                                    </p>
-                                                    <p className="heading-para-text"><span className="role-heading">contact : &nbsp; &nbsp;</span>
-                                                        Mail application with resume ref job code 323 to Hiring Manager, AppSys Technologies, LLC, P.O.Box 3645, Olathe, KS 66063
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {/* Card 2 */}
-                                    <div className="card">
-                                        <div className="card-header" id="headingTwo">
-                                            <h5 className="mb-0">
-                                                <button className="btn btn-link collapsed role-main-heading" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    Programmer Analyst
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                            <div className="card-body">
-                                                <div className="card-body-container">
-                                                    <p className="heading-para-text"><span className="role-heading">Position : &nbsp; &nbsp;</span>
-                                                        Fulltime job, 40 hours per week
-                                                    </p>
-                                                    <p className="heading-para-text"><span className="role-heading">Number Of Openings : &nbsp; &nbsp;</span>
-                                                        Multiple
-                                                    </p>
-                                                    <p className="heading-para-text"><span className="role-heading">Location : &nbsp; &nbsp;</span>
-                                                    </p>
-                                                    <p className="heading-para-text"><span className="role-heading">Job Duties : &nbsp; &nbsp;</span>
-                                                    </p>
-                                                    <p className="heading-para-text"><span className="role-heading">Education Required : &nbsp; &nbsp;</span>
-                                                        Bachelor’s Degree in Computer Science, Information Technology, or directly related field of study.
-                                                    </p>
-                                                    <p className="heading-para-text"><span className="role-heading">contact : &nbsp; &nbsp;</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {/* card 3 */}
-                                    <div className="card">
-                                        <div className="card-header" id="headingThree">
-                                            <h5 className="mb-0">
-                                                <button className="btn btn-link collapsed role-main-heading" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    DevOps Engineer
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                            <div className="card-body">
-                                                <div className="card-body-container">
-                                                    <p className="heading-para-text"><span className="role-heading">Position : &nbsp; &nbsp;</span>
-                                                        Fulltime job, 40 hours per week
-                                                    </p>
-                                                    <p className="heading-para-text"><span className="role-heading">Number Of Openings : &nbsp; &nbsp;</span>
-                                                        Multiple
-                                                    </p>
-                                                    <p className="heading-para-text"><span className="role-heading">Location : &nbsp; &nbsp;</span>
-                                                    </p>
-                                                    <p className="heading-para-text"><span className="role-heading">Job Duties : &nbsp; &nbsp;</span>
-                                                    </p>
-                                                    <p className="heading-para-text"><span className="role-heading">Education Required : &nbsp; &nbsp;</span>
-                                                        Bachelor’s Degree in Computer Science, Information Technology, or directly related field of study.
-                                                    </p>
-                                                    <p className="heading-para-text"><span className="role-heading">contact : &nbsp; &nbsp;</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                        <Careers />
                         {/* contact section page */}
                         <secion className="contact-section" id="contactUs">
                             <div className="contact-container">
