@@ -2,17 +2,15 @@ import React from 'react';
 import { nav } from './NavList';
 import { Link } from 'react-router-dom'
 
+
 class Header extends React.Component {
-    componentDidMount(){
-        var script = document.createElement('script');
-        script.src = "assets/index.js";
-        document.getElementsByTagName('head')[0].appendChild(script);
-    }
+   
     render() {
+        
         return (
             <div>
                 <header className="header-container" id="headerContainerEle">
-                    {/*nav container*/}
+                    {/* nav container */}
                     <nav className="nav-container">
                         {/* Logo container */}
                         <div className="logo-container">

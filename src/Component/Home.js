@@ -1,9 +1,11 @@
 import React from 'react';
 import Careers from './SubComponents/Careers/Careers';
 import Clients from './SubComponents/Clients';
+import { Contact } from './SubComponents/ContactList';
 import Header from './SubComponents/Header/Header';
 
 class Home extends React.Component {
+
     render() {
         return (
             <>
@@ -222,11 +224,13 @@ class Home extends React.Component {
                                     </div>
                                     <div className="address-container">
                                         <h1 className="address-heading"> Contact Us </h1>
-                                        <p className="address-para"><span className="contact-us-subheading">Email : </span>hr@AppSystechnologies.com</p>
-                                        <p className="address-para"><span className="contact-us-subheading">HR &amp; Payroll : </span>hr@AppSystechnologies.com</p>
-                                        <p className="address-para"><span className="contact-us-subheading">Immigration : </span>hr@AppSystechnologies</p>
-                                        <p className="address-para"><span className="contact-us-subheading">Accounting : </span>hr@AppSystechnologies</p>
-                                        <p className="address-para"><span className="contact-us-subheading">Escalation : </span>hr@AppSystechnologies</p>
+                                        {Contact.map(conList => {
+                                            return (
+                                                <p className="address-para">
+                                                    <span className="contact-us-subheading">{conList.label} : </span>{conList.email}@AppSystechnologies.com
+                                                </p>
+                                            )
+                                        })}
                                     </div>
                                 </div>
                             </div>
@@ -275,16 +279,14 @@ class Home extends React.Component {
                                 <h1 className="footer-section-heading">Contact Us</h1>
                                 <ul className="footer-list-items">
                                     <li className="footer-list-item">Phone: +1913-626-6825</li>
-                                    <li className="footer-list-item">HR &amp; Payroll: sl@AppSystechnologies</li>
-                                    <li className="footer-list-item">Immigration: ss@AppSystechnologies</li>
-                                    <li className="footer-list-item">Accounting: vb@AppSystechnologies</li>
-                                    <li className="footer-list-item">Escalation: as@AppSystechnologies</li>
+                                    {Contact.map(cList => {
+                                        return <li className="footer-list-item">{cList.label}: {cList.email}@AppSystechnologies.com</li>
+                                    })}
                                 </ul>
                             </div>
                         </footer>
                     </main>
                 </div>
-
             </>
         )
     }

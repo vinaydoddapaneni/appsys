@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+        
           <Route to="/" component={Home} />
         </Switch>
       </Router>
