@@ -1,7 +1,8 @@
 import React from 'react';
 import Careers from './SubComponents/Careers/Careers';
 import Clients from './SubComponents/Clients';
-import { Contact } from './SubComponents/ContactList';
+import { Contact, FooterSection, Icon } from './SubComponents/ContactList';
+import Footer from './SubComponents/Footer';
 import Header from './SubComponents/Header/Header';
 
 class Home extends React.Component {
@@ -43,13 +44,15 @@ class Home extends React.Component {
                             </div>
                         </section>
                         {/*section Company Page */}
+                        
                         <section className="home-page-container" id="company">
                             <div className="home-page-content-container">
                                 <div className="home-heading-container">
                                     <h1 className="home-heading">Company</h1>
                                 </div>
                                 <div className="home-content-container">
-                                    <p className="content-para">AppSys Technologies is a one-stop hub for IT Training and Placement services.
+                                    <p className="content-para">
+                                        AppSys Technologies is a one-stop hub for IT Training and Placement services.
                                         With many years of experience and high quality team of experts, we have established ourselves as a
                                         pioneer in the Industry. We help individuals with IT backgrounds, either graduates or post graduates,
                                         through industry level training in major advance technologies such as Java UI, Big Data, .Net, Java,
@@ -236,55 +239,7 @@ class Home extends React.Component {
                             </div>
                         </secion>
                         {/*footer section */}
-                        <footer className="footer-section" id="footerSection">
-                            <div className="footer-section-block">
-                                <div className="footer-logo-container">
-                                    <a href="#" className="nav_logo" id="navLogoEle">
-                                        <img src="assets\img\logo.png" className="logo-image-appsys" />
-                                    </a>
-                                </div>
-                                <div className="discription-section">
-                                    <p className="description-para">
-                                        AppSys Technologies is a global IT Services, Product Development, and Business Solutions firm based in
-                                        Kansas. We focus on delivering flexible IT solutions for today’s complex
-                                        business technology.
-                                    </p>
-                                </div>
-                                <div className="social-icons">
-                                    <a href="#" className="socila-icons"><i className="bi bi-instagram icon" /></a>
-                                    <a href="#" className="socila-icons"><i className="bi bi-facebook icon" /></a>
-                                    <a href="#" className="socila-icons"><i className="bi bi-twitter icon" /></a>
-                                    <a href="#" className="socila-icons"><i className="bi bi-linkedin icon" /></a>
-                                </div>
-                            </div>
-                            <div className="footer-section-block">
-                                <h1 className="footer-section-heading">Services</h1>
-                                <ul className="footer-list-items">
-                                    <li className="footer-list-item">Application Development</li>
-                                    <li className="footer-list-item">Business Intelligence</li>
-                                    <li className="footer-list-item">Workforce Solutions</li>
-                                    <li className="footer-list-item">Technology Services</li>
-                                </ul>
-                            </div>
-                            <div className="footer-section-block">
-                                <h1 className="footer-section-heading">OUR MISSION</h1>
-                                <ul className="footer-list-items">
-                                    <li className="footer-list-item">Integrity in Services</li>
-                                    <li className="footer-list-item">Commitment to the Solutionss</li>
-                                    <li className="footer-list-item">Exceptional Approach to Business</li>
-                                    <li className="footer-list-item">Quality of Services or Products</li>
-                                </ul>
-                            </div>
-                            <div className="footer-section-block">
-                                <h1 className="footer-section-heading">Contact Us</h1>
-                                <ul className="footer-list-items">
-                                    <li className="footer-list-item">Phone: +1913-626-6825</li>
-                                    {Contact.map(cList => {
-                                        return <li className="footer-list-item">{cList.label}: {cList.email}@AppSystechnologies.com</li>
-                                    })}
-                                </ul>
-                            </div>
-                        </footer>
+                        <Footer Contact={Contact} FooterSection={FooterSection} Icon={Icon} />
                     </main>
                 </div>
             </>

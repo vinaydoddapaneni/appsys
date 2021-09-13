@@ -5,3 +5,28 @@ export const Contact = [
     { email: "vb", label: "Accounting" },
     { email: "as", label: "Escalation" }
 ]
+
+export const FooterSection = [
+    {
+        label: "Services",
+        items: [
+            "Application Development",
+            "Business Intelligence",
+            "Workforce Solutions",
+            "Technology Services"
+        ]
+    },
+    {
+        label: "OUR MISSION",
+        items: [
+            "Integrity in Services",
+            "Commitment to the Solutionss",
+            "Exceptional Approach to Business",
+            "Quality of Services or Products"
+        ]
+    }
+]
+
+export const Icon = [
+    { name: "instagram" }, { name: "facebook" }, { name: "twitter" }, { name: "linkedin" }
+]
