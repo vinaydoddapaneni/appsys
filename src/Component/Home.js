@@ -69,7 +69,7 @@ class Home extends React.Component {
                         <section className="who-page-container" id="whoAreWe">
                             <div className="whoAreWe-container">
                                 <div className="whoAreWe-image-container">
-                                    <img src="assets\img\brain.png" className="whoarewe-image" />
+                                    <img src="assets\img\brain.png" className="whoarewe-image" alt="brain"/>
                                 </div>
                                 <div className="whoarewe-content-container">
                                     <div className="whoarewe-content-container-heading">
@@ -114,7 +114,7 @@ class Home extends React.Component {
                                     </div>
                                 </div>
                                 <div className="mission-values-image-container">
-                                    <img src="assets\img\pencils.png" className="mission-value-image" />
+                                    <img src="assets\img\pencils.png" className="mission-value-image" alt="pencils" />
                                 </div>
                             </div>
                         </section>
@@ -200,13 +200,13 @@ class Home extends React.Component {
                         {/* careers section page */}
                         <Careers />
                         {/* contact section page */}
-                        <secion className="contact-section" id="contactUs">
+                        <section className="contact-section" id="contactUs">
                             <div className="contact-container">
                                 <div className="contact-heading-container">
                                     <h1 className="contact-heading">Contact Us </h1>
                                 </div>
                                 <div className="contact-map-container">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.438283740677!2d-94.74880068465049!3d38.86821317957512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0bf9508ec7d09%3A0xde013a4a87a79604!2s13975%20W%20143rd%20Ct%2C%20Olathe%2C%20KS%2066062!5e0!3m2!1sen!2sus!4v1629381284329!5m2!1sen!2sus" height={300} frameBorder={0} style={{ border: 0 }} allowFullScreen="true" aria-hidden="false" tabIndex={0} className="map-image">
+                                    <iframe title="App Sys Technology" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.438283740677!2d-94.74880068465049!3d38.86821317957512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0bf9508ec7d09%3A0xde013a4a87a79604!2s13975%20W%20143rd%20Ct%2C%20Olathe%2C%20KS%2066062!5e0!3m2!1sen!2sus!4v1629381284329!5m2!1sen!2sus" height={300} frameBorder={0} style={{ border: 0 }} allowFullScreen={true} aria-hidden="false" tabIndex={0} className="map-image">
                                     </iframe>
                                     {/*-  <iframe src=
 "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233913121413!2d77.4051603706222!3d28.50292593193056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce626851f7009%3A0x621185133cfd1ad1!2sGeeksforGeeks!5e0!3m2!1sen!2sin!4v1585040658255!5m2!1sen!2sin"
@@ -229,7 +229,7 @@ class Home extends React.Component {
                                         <h1 className="address-heading"> Contact Us </h1>
                                         {Contact.map(conList => {
                                             return (
-                                                <p className="address-para">
+                                                <p className="address-para" key={conList.key}>
                                                     <span className="contact-us-subheading">{conList.label} : </span>{conList.email}@AppSystechnologies.com
                                                 </p>
                                             )
@@ -237,7 +237,7 @@ class Home extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                        </secion>
+                        </section>
                         {/*footer section */}
                         <Footer Contact={Contact} FooterSection={FooterSection} Icon={Icon} />
                     </main>

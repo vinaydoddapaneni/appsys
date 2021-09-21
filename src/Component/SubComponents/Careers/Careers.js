@@ -14,7 +14,7 @@ function Careers() {
                         {/* Card 1 */}
                         {CareersList.map(carrer => {
                             return (
-                                <div className="card">
+                                <div className="card" key={carrer.key}>
                                     <div className="card-header" id={`heading${carrer.role}`}>
                                         <h5 className="mb-0">
                                             <button className="btn btn-link role-main-heading" data-toggle="collapse" data-target={`#collapse${carrer.role}`} aria-expanded="true" aria-controls={`collapse${carrer.role}`}>

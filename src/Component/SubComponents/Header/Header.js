@@ -1,8 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { nav } from './NavList';
-import { Link } from 'react-router-dom'
-// import $ from 'jquery';
-
 
 class Header extends React.Component {
     componentDidMount() {
@@ -176,16 +174,16 @@ navLinkContact.addEventListener('click', () => {
                     <nav className="nav-container">
                         {/* Logo container */}
                         <div className="logo-container">
-                            <a href="#" className="nav_logo" id="navLogoEle">
-                                <img src="assets\img\logo.png" className="logo-image-appsys" />
-                            </a>
+                            <Link to="#" className="nav_logo" id="navLogoEle">
+                                <img src="assets\img\logo.png" className="logo-image-appsys" alt="logo" />
+                            </Link>
                         </div>
                         {/*nav items */}
                         <div className="nav-items" id="navItems">
                             <ul className="nav-items-container">
                                 {nav.map((list) => {
                                     return (
-                                        <li className="nav_item">
+                                        <li className="nav_item" key={list.key}>
                                             <a
                                                 href={`#${list.name}`}
                                                 className={`nav_link ${list.active}`}
