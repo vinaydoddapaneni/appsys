@@ -239,6 +239,7 @@ body {
     flex-direction:row;
     justify-content:center;
     margin-bottom:40px;
+    margin-top: 24px;
 }
 
 .home-heading{
@@ -860,6 +861,7 @@ body {
 }
 .expand-container{
     width:100%;
+    margin-top: 20px;
 }
 .careers-heading{
     font-size: 35px;
@@ -934,6 +936,7 @@ body {
     align-items: center;
     padding:20px;
     color:white;
+    margin-top: 20px;
 }
 .contact-heading{
     font-size:35px;
