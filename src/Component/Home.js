@@ -1,9 +1,9 @@
 import React from 'react';
-import Careers from './SubComponents/Careers/Careers';
+import Careers from './SubComponents/Careers';
 import Clients from './SubComponents/Clients';
-import { Contact, FooterSection, Icon } from './SubComponents/ContactList';
+import { Contact, FooterSection, Icon, slideImage } from './SubComponents/List';
 import Footer from './SubComponents/Footer';
-import Header from './SubComponents/Header/Header';
+import Header from './SubComponents/Header';
 
 class Home extends React.Component {
 
@@ -18,20 +18,18 @@ class Home extends React.Component {
                         <section className="corosel-container" id="home">
                             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                                 <ol className="carousel-indicators">
-                                    <li data-target="#carouselExampleIndicators" data-slide-to={0} className="active" />
-                                    <li data-target="#carouselExampleIndicators" data-slide-to={1} />
-                                    <li data-target="#carouselExampleIndicators" data-slide-to={2} />
+                                    {slideImage.map(image => {
+                                        return <li key={image.id} data-target="#carouselExampleIndicators" data-slide-to={image.id} className={image.active} />
+                                    })}
                                 </ol>
                                 <div className="carousel-inner">
-                                    <div className="carousel-item active">
-                                        <img className="d-block w-100" src="assets\img\slide bar 1.jpg" alt="First slide" />
-                                    </div>
-                                    <div className="carousel-item">
-                                        <img className="d-block w-100" src="assets\img\slide bar 2.jpg" alt="Second slide" />
-                                    </div>
-                                    <div className="carousel-item">
-                                        <img className="d-block w-100" src="assets\img\slide bar 3.jpg" alt="Third slide" />
-                                    </div>
+                                    {slideImage.map(image => {
+                                        return (
+                                            <div key={image.id} className={`carousel-item ${image.active}`}>
+                                                <img className="d-block w-100" src={`assets/img/slide bar ${image.img}.jpg`} alt="First slide" />
+                                            </div>
+                                        )
+                                    })}
                                 </div>
                                 <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                                     <span className="carousel-control-prev-icon" aria-hidden="true" />
@@ -44,7 +42,6 @@ class Home extends React.Component {
                             </div>
                         </section>
                         {/*section Company Page */}
-                        
                         <section className="home-page-container" id="company">
                             <div className="home-page-content-container">
                                 <div className="home-heading-container">
@@ -69,7 +66,7 @@ class Home extends React.Component {
                         <section className="who-page-container" id="whoAreWe">
                             <div className="whoAreWe-container">
                                 <div className="whoAreWe-image-container">
-                                    <img src="assets\img\brain.png" className="whoarewe-image" alt="brain"/>
+                                    <img src="assets\img\brain.png" className="whoarewe-image" alt="brain" />
                                 </div>
                                 <div className="whoarewe-content-container">
                                     <div className="whoarewe-content-container-heading">
@@ -208,16 +205,6 @@ class Home extends React.Component {
                                 <div className="contact-map-container">
                                     <iframe title="App Sys Technology" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.438283740677!2d-94.74880068465049!3d38.86821317957512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0bf9508ec7d09%3A0xde013a4a87a79604!2s13975%20W%20143rd%20Ct%2C%20Olathe%2C%20KS%2066062!5e0!3m2!1sen!2sus!4v1629381284329!5m2!1sen!2sus" height={300} frameBorder={0} style={{ border: 0 }} allowFullScreen={true} aria-hidden="false" tabIndex={0} className="map-image">
                                     </iframe>
-                                    {/*-  <iframe src=
-"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233913121413!2d77.4051603706222!3d28.50292593193056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce626851f7009%3A0x621185133cfd1ad1!2sGeeksforGeeks!5e0!3m2!1sen!2sin!4v1585040658255!5m2!1sen!2sin"
-      
-      height="300"
-      frameborder="0"
-      style="border:0;"
-      allowfullscreen="true"
-      aria-hidden="false"
-      tabindex="0" class="map-image">
-    </iframe> */}
                                 </div>
                                 <div className="address-content-container">
                                     <div className="address-container">

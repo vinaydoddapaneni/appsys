@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { nav } from './NavList';
+import { nav } from './List';
 
 class Header extends React.Component {
     componentDidMount() {
@@ -192,14 +192,6 @@ navLinkContact.addEventListener('click', () => {
                                         </li>
                                     )
                                 })}
-                                {/* <li className="nav_item"><a href="#home" className="nav_link active-link" id="navLinkHome">Home</a></li>
-                            <li className="nav_item"><a href="#company" className="nav_link" id="navLinkCompany">Company</a></li>
-                            <li className="nav_item"><a href="#whoAreWe" className="nav_link" id="navLinkWhoAreWe">Who Are We</a></li>
-                            <li className="nav_item"><a href="#missionAndValues" className="nav_link" id="navLinkmissionandvalues">Mission And Values</a></li>
-                            <li className="nav_item"><a href="#services" className="nav_link" id="navLinkServices">Services</a></li>
-                            <li className="nav_item"><a href="#clients" className="nav_link" id="navLinkClients">Clients</a></li>
-                            <li className="nav_item"><a href="#careers" className="nav_link" id="navLinkCareers">Careers</a></li>
-                            <li className="nav_item"><a href="#contactUs" className="nav_link" id="navLinkContact">Contact Us</a></li> */}
                             </ul>
                         </div>
                         <div className="nav_toggle" id="navToggle">

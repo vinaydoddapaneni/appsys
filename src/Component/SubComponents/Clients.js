@@ -1,13 +1,8 @@
 import React from 'react'
+import { imges } from './List'
 
 function Clients() {
-    const imges = [{ names: "apple", type: 'jpg', key: 1 },
-    { names: "at&t", type: 'png', key: 2 },
-    { names: "cdk global", type: 'png', key: 3 },
-    { names: "immegration", type: 'png', key: 4 },
-    { names: "verizon", type: 'png', key: 5 },
-    { names: "sangfilims", type: 'jpg', key: 6 },
-    { names: "pearson", type: 'png', key: 7 }]
+
     return (
         <div>
             <section className="clients-section" id="clients">
