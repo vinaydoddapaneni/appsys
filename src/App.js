@@ -12,7 +12,7 @@ class App extends React.Component {
           <title>APPSYS</title>
           <meta name="description" content="AppSys Technologies is a global IT Services, Product Development, and Business Solutions firm based in Kansas. We focus on delivering flexible IT solutions for today’s complex business technology." />
           <meta name="keywords"
-            content="IT Services Company, IT company, IT Training, Placement services, industry level training, technologies, Java UI, Big Data, .Net, Java, iOS/Android, Infomatica, Websphere Admin, Weblogin Admin, Selenium Automation QA, Sales Force, courses, IT companies, Google, Facebook, and Apple, it consulting companies, 
+            content="appsys, IT Services Company, IT company, IT Training, Placement services, industry level training, technologies, Java UI, Big Data, .Net, Java, iOS/Android, Infomatica, Websphere Admin, Weblogin Admin, Selenium Automation QA, Sales Force, courses, IT companies, Google, Facebook, and Apple, it consulting companies, 
           top it companies, it outsourcing companies, usa it, stericycle shred it,
           atos it solutions, best it companies, it startup, it global,
           biggest it companies, largest it companies, top 10 it companies,
