@@ -19,7 +19,9 @@
     "start": "react-scripts start",
     "build": "CI= react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "s":"code . && yarn start",
+    "b":"git add . && git commit -m 'sample_commit' && git push origin vinay-dev"
   },
   "eslintConfig": {
     "extends": [
