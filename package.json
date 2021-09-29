@@ -13,6 +13,7 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "react-spinners": "^0.11.0",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -20,8 +21,7 @@
     "build": "CI= react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "s":"code . && yarn start",
-    "b":"git add . && git commit -m 'sample_commit' && git push origin vinay-dev"
+    "s": "code . && yarn start"
   },
   "eslintConfig": {
     "extends": [

@@ -1,18 +1,20 @@
-import React from 'react';
-import Home from "./Component/Home";
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import Loading from './Component/SubComponents/Loading';
+const Home = React.lazy(() => import("./Component/Home"))
 
 class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <Helmet>
-          <title>APPSYS</title>
-          <meta name="description" content="AppSys Technologies is a global IT Services, Product Development, and Business Solutions firm based in Kansas. We focus on delivering flexible IT solutions for today’s complex business technology." />
-          <meta name="keywords"
-            content="appsys, IT Services Company, IT company, IT Training, Placement services, industry level training, technologies, Java UI, Big Data, .Net, Java, iOS/Android, Infomatica, Websphere Admin, Weblogin Admin, Selenium Automation QA, Sales Force, courses, IT companies, Google, Facebook, and Apple, it consulting companies, 
+      <div>
+        <Suspense fallback={<Loading />}>
+          <Helmet>
+            <title>APPSYS</title>
+            <meta name="description" content="AppSys Technologies is a global IT Services, Product Development, and Business Solutions firm based in Kansas. We focus on delivering flexible IT solutions for today’s complex business technology." />
+            <meta name="keywords"
+              content="appsys, IT Services Company, IT company, IT Training, Placement services, industry level training, technologies, Java UI, Big Data, .Net, Java, iOS/Android, Infomatica, Websphere Admin, Weblogin Admin, Selenium Automation QA, Sales Force, courses, IT companies, Google, Facebook, and Apple, it consulting companies, 
           top it companies, it outsourcing companies, usa it, stericycle shred it,
           atos it solutions, best it companies, it startup, it global,
           biggest it companies, largest it companies, top 10 it companies,
@@ -26,13 +28,14 @@ class App extends React.Component {
           firmit, top 100 it companies, largest it consulting companies, top it outsourcing companies,
           top it staffing firms, verizon it outsourcing to infosys, prudential everybody’s doing it,
           amadeus it holding, hcl it company, large it companies"
-          />
-        </Helmet>
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Home} />
-          </Switch>
-        </Router>
+            />
+          </Helmet>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Home} />
+            </Switch>
+          </Router>
+        </Suspense>
       </div>
     );
   }
