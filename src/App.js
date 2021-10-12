@@ -2,7 +2,8 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Loading from './Component/SubComponents/Loading';
-const Home = React.lazy(() => import("./Component/Home"))
+const Home = React.lazy(() => import("./Component/Home"));
+const Load = React.lazy(()=>import("./Component/LodingS"));
 
 class App extends React.Component {
 
@@ -33,6 +34,7 @@ class App extends React.Component {
           <Router>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route path="/loading" component={Load} />
             </Switch>
           </Router>
         </Suspense>
