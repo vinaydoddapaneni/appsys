@@ -46,6 +46,7 @@ function Footer({ Contact, FooterSection, Icon }) {
                 </div>
                 <div className="text-center">© 2021 Copyright:
                     <a href="https://appsys.netlify.app/"> appsys.netlify.app</a>
+                    <Link to="/loading" className="ml-5">Loading</Link>
                 </div>
 
             </footer>

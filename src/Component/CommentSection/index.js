@@ -3,6 +3,7 @@ import axios from 'axios';
 import $ from 'jquery';
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import './style.css';
+import { Link } from 'react-router-dom';
 
 const CommentSection = () => {
     const [list, setList] = useState([])
@@ -23,7 +24,7 @@ const CommentSection = () => {
             <>
                 <SkeletonTheme color="#202020" highlightColor="#444">
                     <p>
-                        <Skeleton circle={true} height={50} width={50} />
+                        <Skeleton circle={true} height={50} width={50} delay={5} duration={2} />
                         <Skeleton count={1} />
                         <Skeleton count={2} />
                     </p>
@@ -39,7 +40,8 @@ const CommentSection = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-5 col-md-6 col-12 pb-4" >
-                            <h1>Comments</h1>
+                            <Link className="btn btn-primary" to="/">Back to Home</Link>
+                            <h1 style={{ color: 'black' }}>Comments</h1>
                             {list && list.slice(1, visable).map(list => (
                                 <div key={list.id} className="comment mt-4 text-justify float-left"> <img src="https://i.imgur.com/yTFUilP.jpg" alt className="rounded-circle" width={40} height={40} />
                                     <h4>{list.title}</h4> <span>- 20 October, 2018</span> <br />
@@ -55,7 +57,7 @@ const CommentSection = () => {
                                     {skeleton()}
                                     {skeleton()}
 
-                                    
+
                                 </>
                             )}
                             {visable < list.length && (
